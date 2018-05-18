@@ -43,7 +43,7 @@ We can choose 'up', 'down', 'left' and 'right' to approach destination
   - Initialize enviroment and get current state s
   - According to s, Actor will give an action a: (ε-Greedy, e.g. ε = 0.9)
     - 10%: random choose one of 'up', 'down', 'left' or 'right'
-    - 90%: choose the action with the highest Q(s; θ)
+    - 90%: choose the action with the highest ![Q(s:\theta)](https://latex.codecogs.com/svg.latex?Q%28s;\theta%29)
   - Take the action, and observe the reward, r, as well as the new state, s'.
   - Update the θ for the state using the observed reward and the maximum reward possible for the next state.
     - ![loss=(r+\gamma\max\_{a'}Q(s',a';\theta^{-})-Q(s,a:\theta))^{2}](https://latex.codecogs.com/svg.latex?loss=%28r+\gamma%20max_{a%27}Q%28s%27,a%27;\theta^{-}%29-Q%28s,a;\theta%29%29^{2})
