@@ -40,7 +40,7 @@ We can choose 'up', 'down', 'left' and 'right' to approach destination
 ## Algorithm
 - Deep Q Network
   - Initialize Q network with parameters θ
-  - Initialize Enviroment and get current state s
+  - Initialize enviroment and get current state s
   - According to s, Actor will give an action a: (ε-Greedy, e.g. ε = 0.9)
     - 10%: random choose one of 'up', 'down', 'left' or 'right'
     - 90%: choose the action with the highest Q(s; θ)
