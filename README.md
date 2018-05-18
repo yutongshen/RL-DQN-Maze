@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 
 ## Usage
 ```sh
-$ python usage: main.py [-h] [-l LENGTH] [-i ITERATION] [-d Delay]
+$ python usage: main.py [-h] [-l LENGTH] [-i ITERATION] [-m MEMORYSIZE] [-d Delay]
 ```
 
 | optional Options           | Description                                    |
@@ -38,17 +38,17 @@ We can choose 'up', 'down', 'left' and 'right' to approach destination
 - X: Trap
 
 ## Algorithm
-- SARSA
-  - Initialize Q network with parameter θ
-  - Initialize Enviroment and get current state, s
+- Deep Q Network
+  - Initialize Q network with parameters θ
+  - Initialize Enviroment and get current state s
   - According to s, Actor will give an action a: (ε-Greedy, e.g. ε = 0.9)
     - 10%: random choose one of 'up', 'down', 'left' or 'right'
     - 90%: choose the action with the highest Q(s; θ)
   - Take the action, and observe the reward, r, as well as the new state, s'.
   - Update the θ for the state using the observed reward and the maximum reward possible for the next state.
     - ![loss=(r+\gamma\max\_{a'}Q(s',a';\theda')-Q(s,a:\theda))^{2}](https://latex.codecogs.com/svg.latex?loss=%28r+\gamma%20max_{a%27}Q%28s%27,a%27;\theda'%29-Q%28s,a;\theda%29%29^{2})
-    - ![\theda=\theda-lr\triangledown\theda](https://latex.codecogs.com/svg.latex?\theda=\theda-lr\triangledown\theda)
-  - Every C steps reset ![\theda'=\theda](https://latex.codecogs.com/svg.latex?\theda'=\theda)
+    - ![\theta=\theta-lr\triangledown\theta](https://latex.codecogs.com/svg.latex?\theda=\theta-lr\triangledown\theta)
+  - Every C steps reset ![\theta'=\theta](https://latex.codecogs.com/svg.latex?\theta'=\theta)
   - Set the state to the new state, and repeat the process until a terminal state is reached.
 
 ## Authors
