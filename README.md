@@ -24,11 +24,11 @@ $ python usage: main.py [-h] [-l LENGTH] [-i ITERATION] [-m MEMORYSIZE] [-d Dela
 
 ## Game Rules
 
-\_ \_ \_ \* <- Destination, will get +1 reward <br>
+\_ \_ \_ \* ![\leftarrow](https://latex.codecogs.com/svg.latex?\leftarrow) Destination, will get +1 reward <br>
 \_ X \_ \_<br>
 \_ \_ \_ \_<br>
 o \_ \_ \_<br>
-^<br>
+![\uparrow](https://latex.codecogs.com/svg.latex?\uparrow)<br>
 Start Point<br>
 
 We can choose 'up', 'down', 'left' and 'right' to approach destination
