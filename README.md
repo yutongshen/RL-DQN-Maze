@@ -47,7 +47,7 @@ We can choose 'up', 'down', 'left' and 'right' to approach destination
   - Take the action, and observe the reward, r, as well as the new state, s'.
   - Update the θ for the state using the observed reward and the maximum reward possible for the next state.
     - ![L=(r+\gamma\max\_{a'}Q(s',a';\theta^{-})-Q(s,a:\theta))^{2}](https://latex.codecogs.com/svg.latex?L=%28r+\gamma%20max_{a%27}Q%28s%27,a%27;\theta^{-}%29-Q%28s,a;\theta%29%29^{2})
-    - ![\theta=\theta-lr\triangledown\_\thetaL](https://latex.codecogs.com/svg.latex?\theta=\theta-lr\triangledown_\theta%20L)
+    - ![\theta=\theta-\eta\cdotL\cdot\triangledown\_\thetaQ(s,a:\theta)](https://latex.codecogs.com/svg.latex?\theta=\theta-\eta\cdot%20L\cdot\triangledown_\theta%20Q%28s,a:\theta%29)
   - Every C steps reset ![\theta^{-}\leftarrow\theta](https://latex.codecogs.com/svg.latex?\theta^{-}\leftarrow\theta)
   - Set the state to the new state, and repeat the process until a terminal state is reached.
 
